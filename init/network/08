@@ -1,0 +1,3 @@
+On execute la commande traceroute sur une IP qu'on a obtenu a la question precedente.
+Exemple: traceroute 143.204.222.49.
+On trouve amazon-th2.par.franceix.net qui correspond a l'hebergeur Amazon: AWS.

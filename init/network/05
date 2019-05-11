@@ -1,0 +1,3 @@
+#!/bin/sh
+
+nslookup slash16.org | head -n1 | cut -d$'	' -f3

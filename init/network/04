@@ -1,0 +1,3 @@
+#!/bin/sh
+
+netstat -nr | grep default | head -n1 | cut -d' ' -f13

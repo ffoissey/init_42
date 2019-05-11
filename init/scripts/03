@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ -z $1 ]
+	then
+		echo "usage: ./03 USER"
+		exit
+	else
+		DIR=/home/$1
+fi
+if [ -z `dpkg-query -l | cut -d' ' -f 3 | grep "^vim$"` ]
+	then
+		read -p 'Install Vim ? [Y/n]' OK
+		if [ $OK = 'Y' ] || [ $OK = 'y' ]
+			then
+				echo "Vim install..."
+				apt-get -y install vim
+				echo "Done."
+		fi
+fi
+read -p 'Configure Vim ? [Y/n]' OK
+if [ $OK = 'Y' ] || [ $OK = 'y' ]
+	then
+		echo "Vim configure..."
+		echo "sy on\nset shiftwidth=4\nset tabstop=4\nset autoindent\nset smartindent\nset nu\nset relativenumber" >> $DIR/.vimrc
+		echo "Done."
+	else
+		exit
+fi

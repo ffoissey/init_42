@@ -1,0 +1,4 @@
+# Pour kill le processus tail on peut aussi utiliser 'pkill tail'
+# Sinon pour kill le dernier job mis en background :
+
+kill %%
